@@ -8,7 +8,7 @@ local CoreGui = game:GetService("CoreGui")
 local player = Players.LocalPlayer
 local playerName = player.DisplayName or player.Name
 
-local VERSION = "2.6.3"
+local VERSION = "2.4.0"
 local WHITELIST_URL =
 	"https://amrho94.github.io/target/part/hash/close/almost/oof/hash/hashhub/fart/whitelist.lua"
 
