@@ -8,9 +8,10 @@ local CoreGui = game:GetService("CoreGui")
 local player = Players.LocalPlayer
 local playerName = player.DisplayName or player.Name
 
-local VERSION = "2.4.0"
+local VERSION = "2.6.3"
 local WHITELIST_URL =
 	"https://raw.githubusercontent.com/o1nb/Future/refs/heads/main/lib/otherscript/hash/lucky/tropes/riven/seconds/mintues/hours/days/weeks/months/years/decades/centuries/meliniumsorwhatever/whitelist.lua"
+local MINIMUM_TEXT_TIME = 6
 
 local BACKGROUND = Color3.fromRGB(25, 25, 25)
 local PURPLE = Color3.fromRGB(111, 84, 183)
@@ -198,11 +199,17 @@ task.wait(0.12)
 tween(underline, 0.4, {Size = UDim2.fromOffset(225, 1)}, Enum.EasingStyle.Quart)
 task.wait(0.22)
 tween(welcome, 0.42, {TextTransparency = 0}, Enum.EasingStyle.Sine)
+local minimumTextEnd = os.clock() + MINIMUM_TEXT_TIME
 
 -- Stay on the loading screen for exactly as long as the hosted whitelist
 -- needs. Network/compile/runtime errors fail closed.
 while not whitelistFinished do
 	task.wait()
+end
+
+local remainingTextTime = minimumTextEnd - os.clock()
+if remainingTextTime > 0 then
+	task.wait(remainingTextTime)
 end
 
 if not whitelistAllowed then
