@@ -1,6 +1,3 @@
--- // Do smth like loadstring(readfile("Hash Hub construction zone/(folder or file here)"))() so that i dont have to load this bullshit from a github repo LMAO
-
-
 --/ Locals
 local Player = game:GetService("Players").LocalPlayer
 local Mouse = Player:GetMouse()
