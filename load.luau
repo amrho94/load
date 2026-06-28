@@ -10,7 +10,7 @@ local playerName = player.DisplayName or player.Name
 
 local VERSION = "2.6.3"
 local WHITELIST_URL =
-	"https://raw.githubusercontent.com/o1nb/Future/refs/heads/main/lib/otherscript/hash/lucky/tropes/riven/seconds/mintues/hours/days/weeks/months/years/decades/centuries/meliniumsorwhatever/whitelist.lua"
+	""
 local MINIMUM_TEXT_TIME = 6
 
 local BACKGROUND = Color3.fromRGB(25, 25, 25)
